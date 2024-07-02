@@ -28,6 +28,7 @@ const MobileNav = ({user} : MobileNavProps) => {
                     className='cursor-pointer'
                 />
             </SheetTrigger>
+
             <SheetContent side = "left" className='border-none bg-white'>
                 <Link href = "/" className = "cursor-pointer flex items-center gap-1 px-4">
                     <Image
@@ -36,6 +37,7 @@ const MobileNav = ({user} : MobileNavProps) => {
                         height = {34}
                         alt = "Horizon Logo"
                     /> 
+
                     <h1 className ='text-26 font-ibm-plex-serif font-bold text-black-1'>
                         Horizon
                     </h1>
@@ -49,6 +51,7 @@ const MobileNav = ({user} : MobileNavProps) => {
                                 const isActive = pathName === item.route || pathName.startsWith('${item.route}/')
                                 return (
                                     <SheetClose asChild key = {item.route}>
+                                        
                                     <Link 
                                         href={item.route} key={item.label} className={cn('mobilenav-sheet_close w-full', {'bg-bank-gradient' : isActive})}>
                                             <Image 
@@ -75,6 +78,7 @@ const MobileNav = ({user} : MobileNavProps) => {
                         </nav>
                     </SheetClose>
                     
+                    FOOTER
                 </div>
             </SheetContent>
         </Sheet>
